@@ -40,7 +40,7 @@ You will provide feedback on your team and on the assignment by filling the feed
 
 This is an __individual submission__, i.e. each of you has to fill the form. Filling the form contributes to your __Team Factor__ which is 1 by default and is penalized in case of non-submission of the form,  misreporting feedback, or unequal contribution to the submission as reported by your buddies and/or the commit history on GitHub.
 
-Deadline: 2359h on Tue, 6 Feb
+Deadline: 2359h on Tue, 7 Feb
 
 ## 1.3 Peer Review
 
