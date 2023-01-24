@@ -44,11 +44,7 @@ Deadline: 2359h on Mon, 6 Feb
 
 ## 1.3 Peer Review
 
-Two submissions will be shared with you for review which you will evaluate and score for __Style__ according to the accompanying rubric. You will submit a filled copy of the rubric for each submission against _HW 1.3_ which will be made available under the _Assignments_ module on the course page.
-
-This is an __individual submission__ on LMS and contributes to your individual __Review Factor__ which is 1 by default and penalized for non-submission.
-
-Deadline: 2359h on Thu, 9 February
+To be decided later.
 
 # Grading
 
