@@ -49,7 +49,44 @@ def apply_mask(src: MyImage, maskfile: str, average: bool = True) -> MyImage:
     Returns:
     an image which the result of applying the specified mask to src.
     """
-    pass
+    rows, columns = src.size
+    new_image = MyImage(src.size)
+    
+    with open(mask_file, 'r') as file:
+        mask = []
+        mask_size = int(file.readline())
+        mask_lines = file.readlines()
+
+        
+        for line in mask_lines:
+            mask.append(int(line))
+
+        for col in range(columns):
+            for row in range(rows):
+                pixel = 0
+                index = 0
+                c = 0
+                half_size = mask_size // 2
+                for i in range(-half_size, half_size+1, 1):
+                    for j in range(-half_size, half_size+1, 1):
+                        try:
+                            res = (sum(src.get(col + i, row + j)) // 3)
+                            pixel += res * mask[index]
+                            c += mask[index]
+                            index += 1
+                        except:
+                            index += 1
+                            continue
+                        
+                if average == True and index !=0:
+                    p = pixel//c
+                    pixel = int(p)
+
+                if pixel > 255 or pixel < 0:
+                    pixel = min(max(0, pixel), 255)
+                new_image.set(col , row, (pixel, pixel, pixel))
+
+    return new_image
 
 def resize(src: MyImage) -> MyImage:
     """Returns an image which has twice the dimensions of src.
